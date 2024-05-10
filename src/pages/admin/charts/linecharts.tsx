@@ -2,12 +2,12 @@ import { useSelector } from "react-redux";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { LineChart } from "../../../components/admin/Charts";
 import { RootState } from "../../../redux/store";
-import { useBarQuery, useLineQuery } from "../../../redux/api/dashboardAPI";
+import { useLineQuery } from "../../../redux/api/dashboardAPI";
 import { Navigate } from "react-router-dom";
 import { getLastMonths } from "../../../utils/features";
 import { Skeleton } from "../../../components/Loader";
 
-const {last12Months,last6Months}=getLastMonths();
+const {last12Months}=getLastMonths();
 
 const Linecharts = () => {
 

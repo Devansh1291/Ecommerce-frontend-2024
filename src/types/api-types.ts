@@ -1,4 +1,4 @@
-import { Bar, Category, Line, Order, OrderItem, Pie, Product, Stats, User } from "./types";
+import { Bar, Line, Order, Pie, Product, Stats, User } from "./types";
 import { CartItems } from "./types";
 import { ShippingInfo } from "./types";
 

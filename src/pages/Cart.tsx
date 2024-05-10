@@ -3,7 +3,7 @@ import CartItem from "../components/CartItem";
 import { VscError } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { CartReducerIntitialState, UserReducerIntitialState } from "../types/reducer-types";
+import { CartReducerIntitialState} from "../types/reducer-types";
 import { addToCart, discountApplied, removeCartItem } from "../redux/reducer/cartReducer";
 import { CartItems } from "../types/types";
 import { calculatePrice } from "../redux/reducer/cartReducer";
@@ -16,8 +16,6 @@ const Cart = () => {
   let {cartItem,subtotal,tax,total,shippingCharges,discount}=useSelector((state:{cartReducer:CartReducerIntitialState})=>state.cartReducer);
 
   const dispatch=useDispatch();
-
-  const {user}=useSelector((state:{userReducer:UserReducerIntitialState})=>state.userReducer);
 
 
   const [couponCode,setCouponCode]=useState<string>("");

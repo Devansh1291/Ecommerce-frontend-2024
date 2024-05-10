@@ -5,7 +5,6 @@ import AdminSidebar from "../../components/admin/AdminSidebar";
 import TableHOC from "../../components/admin/TableHOC";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { useAllOrdersQuery } from "../../redux/api/orderAPI";
 import toast from "react-hot-toast";
 import { CustomError } from "../../types/api-types";
 import { useEffect } from "react";
@@ -101,7 +100,7 @@ const Customers = () => {
 
   const {user}=useSelector((state:RootState)=>state.userReducer);
 
-  const {isLoading,data,isError,error}=useAllUsersQuery(user?._id!);
+  const {data,isError,error}=useAllUsersQuery(user?._id!);
 
   const [deleteUser]=useDeleteUserMutation();
 

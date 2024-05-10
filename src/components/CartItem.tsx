@@ -2,7 +2,6 @@ import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { server } from "../redux/store";
 import { useDispatch } from "react-redux";
-import { removeCartItem } from "../redux/reducer/cartReducer";
 import { CartItems } from "../types/types";
 type CartItemProps={
     cartItem:CartItems,
@@ -13,8 +12,8 @@ type CartItemProps={
 
 const CartItem = ({cartItem,incrementHandler,decrementHandler,removeHandler}:CartItemProps) => {
 
-    const {productId,name,photo,price,quantity,stock}=cartItem;
-    const dispatch=useDispatch();
+    const {productId,name,photo,price,quantity}=cartItem;
+
   return (
     <div className="cart-item">
       <img src={`${server}/${photo}`} alt={name}/>

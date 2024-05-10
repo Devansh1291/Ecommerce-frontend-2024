@@ -8,14 +8,9 @@ import { useSelector } from "react-redux";
 import { UserReducerIntitialState } from "../../../types/reducer-types";
 import { useDeleteOrderMutation, useOrderDetailsQuery, useUpdateOrderMutation } from "../../../redux/api/orderAPI";
 import { useParams } from "react-router-dom";
-import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import { Skeleton } from "../../../components/Loader";
 import { responseToast } from "../../../utils/features";
 
-const img =
-  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804";
-
-const orderItems:any[]=[];
 
 const defaultInfo:Order={
   shippingInfo:{
@@ -43,7 +38,7 @@ const TransactionManagement = () => {
   const params=useParams();
   const navigate=useNavigate();
 
-  const { isLoading, data, isError, error } = useOrderDetailsQuery(params.id!);
+  const { isLoading, data, isError } = useOrderDetailsQuery(params.id!);
 
   const {
     shippingInfo:{address,city,state,pincode,country},
@@ -59,9 +54,6 @@ const TransactionManagement = () => {
     discount
   }=data?.order || defaultInfo;
 
-  const [order, setOrder] = useState({
-
-  });
 
   const [updateOrder]=useUpdateOrderMutation();
 

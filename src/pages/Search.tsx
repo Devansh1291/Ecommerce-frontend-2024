@@ -3,7 +3,6 @@ import ProductCart from "../components/ProductCart";
 import { useCategoriesQuery, useSearchProductsQuery } from "../redux/api/productAPI";
 import toast from "react-hot-toast";
 import { CustomError } from "../types/api-types";
-import { server } from "../redux/store";
 import { Skeleton } from "../components/Loader";
 import { useDispatch } from "react-redux";
 import { CartItems } from "../types/types";

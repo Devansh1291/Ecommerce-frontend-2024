@@ -7,11 +7,7 @@ import toast from "react-hot-toast";
 import AdminSidebar from "../../components/admin/AdminSidebar";
 import { BarChart, DoughnutChart } from "../../components/admin/Charts";
 import Table from "../../components/admin/DashboardTable";
-import Loader from "../../components/admin/Loader";
-import data from '../../assets/data.json'
 import { useSelector } from "react-redux";
-import { RootState, server } from "../../redux/store";
-import axios from "axios";
 import { useStatsQuery } from "../../redux/api/dashboardAPI";
 import { CustomError } from "../../types/api-types";
 import { UserReducerIntitialState } from "../../types/reducer-types";

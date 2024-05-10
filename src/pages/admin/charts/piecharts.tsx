@@ -1,15 +1,10 @@
 import AdminSidebar from "../../../components/admin/AdminSidebar";
 import { DoughnutChart, PieChart } from "../../../components/admin/Charts";
-import data from "../../../assets/data.json";
 import { useSelector } from "react-redux";
-import { UserReducerIntitialState } from "../../../types/reducer-types";
-import { usePieQuery, useStatsQuery } from "../../../redux/api/dashboardAPI";
-import { CustomError } from "../../../types/api-types";
-import toast from "react-hot-toast";
-import { Skeleton } from "../../../components/Loader";
-import { useEffect, useState } from "react";
+import { usePieQuery} from "../../../redux/api/dashboardAPI";
 import { Navigate } from "react-router-dom";
 import { RootState } from "../../../redux/store";
+import { Skeleton } from "../../../components/Loader";
 
 const PieCharts = () => {
   const { user } = useSelector((state: RootState) => state.userReducer);

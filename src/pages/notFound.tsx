@@ -1,5 +1,4 @@
 import { MdError } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 
 const NotFound = () => {

@@ -1,5 +1,4 @@
-import e from "cors";
-import { ReactElement } from "react";
+
 
 export interface User{
     name:string;

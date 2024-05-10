@@ -2,11 +2,10 @@ import { Elements, PaymentElement, useElements, useStripe } from "@stripe/react-
 import {loadStripe} from '@stripe/stripe-js';
 import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { NewOrderRequest } from "../types/api-types";
 import { useDispatch, useSelector } from "react-redux";
 import { CartReducerIntitialState, UserReducerIntitialState } from "../types/reducer-types";
-import { RootState } from "@reduxjs/toolkit/query";
 import { useNewOrderMutation } from "../redux/api/orderAPI";
 import { resetCart } from "../redux/reducer/cartReducer";
 import { responseToast } from "../utils/features";

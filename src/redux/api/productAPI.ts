@@ -1,7 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { AllProductResponse, CategoriesProductResponse, DeleteProductRequest, MessageResponse, NewProductRequest, SearchProductRequest, SearchProductResponse, UpdateProductRequest, productDetailsResponse } from "../../types/api-types";
-import Search from "../../pages/Search";
-import { query } from "firebase/database";
 
 
 export const productAPI=createApi({
