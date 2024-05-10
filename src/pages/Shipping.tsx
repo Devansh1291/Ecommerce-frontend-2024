@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from "react"
+import {FormEvent, useEffect, useState } from "react"
 import { BiArrowBack } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,9 +6,10 @@ import { CartReducerIntitialState } from "../types/reducer-types";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { saveShippingInfo } from "../redux/reducer/cartReducer";
+import React from 'react';
 
 
-const Shipping = () => {
+const Shipping:React.FC<{}> = () => {
 
   let {cartItem,total}=useSelector((state:{cartReducer:CartReducerIntitialState})=>state.cartReducer);
 
@@ -25,12 +26,11 @@ const Shipping = () => {
     const navigate=useNavigate();
     const dispatch=useDispatch(); 
 
-    if(cartItem.length<=0) return navigate("/cart");
-
-    const changeHandler = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const changeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
       const { name, value } = e.target;
       setShippingInfo((prev) => ({ ...prev, [name]: value }));
     };
+    
 
     const submitHandler=async(e:FormEvent<HTMLFormElement>)=>{
       e.preventDefault();
@@ -63,7 +63,6 @@ const Shipping = () => {
 
     useEffect(()=>{
       if(cartItem.length<=0) return navigate("/cart");
-
     },[cartItem]);
 
   return (
