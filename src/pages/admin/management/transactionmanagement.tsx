@@ -1,7 +1,6 @@
 import { FaTrash } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
-import { useState } from "react";
 import { server } from "../../../redux/store";
 import { Order, OrderItem } from "../../../types/types";
 import { useSelector } from "react-redux";
