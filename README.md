@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# MERN E-COMMERCE FRONTEND 2024
+I have created this Ecommerce project
 
-Currently, two official plugins are available:
+# Prerequisite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  Must have basic knowledge of **Node**, **React**, **Express**, **MongoDB** .
+2.  TypeScript - https://www.w3schools.com/typescript/
+3.   Node -https://www.npmjs.com/package/docx
+4.  React -https://react.dev/
+5.  Express - https://expressjs.com/
+6.  MongoDB - https://www.w3schools.com/mongodb/
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Install Dependencies
 
-- Configure the top-level `parserOptions` property like this:
+**For Backend** - `npm i && npm run build`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Env Variables
+
+Make Sure to Create a  .env file in root directory and add appropriate variables in order to use the app.
+
+**Essential Variables**
+PORT= `4000 or any`
+MONGO_URI= `mongodb://localhost:27017 or cloud uri`
+STRIPE_KEY=`stripe secret key`
+PRODUCT_PER_PAGE=`8 or any`
+
+_fill each filed with your info respectively_
+
+## Author
+
+**LinkedIn** Click [Here](https://www.linkedin.com/in/devansh-trehan-718a5b2b6/) **Devansh Trehan**
+
+
