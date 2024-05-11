@@ -11,6 +11,7 @@ import { userExist, userNotExist } from "./redux/reducer/userReducer";
 import { UserReducerIntitialState } from "./types/reducer-types";
 import ProtectedRoute from "./components/ProtectedRoute";
 import NotFound from "./pages/notFound";
+import { Skeleton } from "./components/Loader";
 
 const Shipping=lazy(()=>import("./pages/Shipping"))
 const Home= lazy(()=>import("./pages/Home"))
@@ -74,7 +75,10 @@ const App = () => {
   },[])
 
   return (
-    <Router>
+    
+      loading?<Skeleton length={20}/>:(
+        <>
+      <Router>
     {/* header */}
     <Header user={user}/>
 
@@ -137,6 +141,9 @@ const App = () => {
     </Suspense>
     <Toaster position="bottom-center"/>
   </Router>
+        </>
+      )
+    
   )
 }
 
