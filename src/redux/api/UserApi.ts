@@ -43,7 +43,7 @@ export const UserApi = createApi({
 export const getUser = async (id: string) => {
   try {
     const { data }: { data: UserResponse } = await axios.get(
-      `${import.meta.env.VITE_SERVER}/api/v1/user/${id}?id=nnD4G4VbaFMAUYL973R8k10pTWq2`
+      `${import.meta.env.VITE_SERVER}/api/v1/user/${id}?id=4321`
     );
 
     return data;

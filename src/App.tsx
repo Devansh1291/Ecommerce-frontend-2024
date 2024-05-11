@@ -74,9 +74,7 @@ const App = () => {
   },[])
 
   return (
-    loading?<Loader/>:
-    <>
-          <Router>
+    <Router>
     {/* header */}
     <Header user={user}/>
 
@@ -139,7 +137,6 @@ const App = () => {
     </Suspense>
     <Toaster position="bottom-center"/>
   </Router>
-    </>
   )
 }
 

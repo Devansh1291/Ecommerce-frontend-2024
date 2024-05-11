@@ -8,6 +8,7 @@ import { FetchBaseQueryError } from "@reduxjs/toolkit/query/react";
 import { MessageResponse } from "../types/api-types";
 import { userExist, userNotExist } from "../redux/reducer/userReducer";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -16,6 +17,7 @@ const Login = () => {
     const [date, setDate] = useState("");
   
     const [login] = useLoginMutation();
+    const navigate=useNavigate();
   
     const loginHandler = async () => {
       try {
@@ -46,13 +48,17 @@ const Login = () => {
           toast.success(res.data.message);
           const data = await getUser(user.uid);
           dispatch(userExist(data?.user!));
+          navigate("/");
+          
         } else {
           const error = res.error as FetchBaseQueryError;
           const message = (error.data as MessageResponse).message;
           toast.error(message);
+          console.log("eroor");
           dispatch(userNotExist());
         }
       } catch (error) {
+        console.log("error.message");
         toast.error("Sign In Fail");
       }
     };
